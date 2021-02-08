@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+// colors
+
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 50%);
+$light-grayish-blue: hsl(240, 5%, 91%);
+
+// globals
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif, Arial;
+}
+
+// pages
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, $soft-violet, $soft-blue);
+}
+
+.container {
+  width: 920px;
+  height: 510px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 15px 40px -15px rgba(0,0,0,0.65);
+
+  // background
+  // I copied this background solution from @ronzy1302 on frontEnd Mentor
+  background-image: url(../../images/bg-pattern-desktop.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: -35.8em 70%;
+
+  @media only screen and (max-width: 1100px) { 
+      width: 87%;   
+  }
+
+  @media only screen and (max-width: 992px) { 
+    background-image: url(../../images/bg-pattern-mobile.svg); 
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: auto;
+    width: 650px;
+    height: 535px;
+  }
+
+  @media only screen and (max-width: 768px) { 
+    width: 500px;   
+  }
+
+  @media only screen and (max-width: 550px) { 
+    width: 327px; 
+    height: 520px;  
+  }
+
+  .row {
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    @media only screen and (max-width: 992px) { 
+      flex-direction: column; 
+    }
+
+    #box {
+      position: absolute;
+      bottom: 12%;
+      left: -10%;
+
+      @media only screen and (max-width: 992px) { 
+        display: none;   
+      }
+    }
+
+    #hero-mobile {
+      display: none;
+      @media only screen and (max-width: 992px) { 
+        display: block;
+        position: absolute;
+        top: -23.5em;
+        left: 11em;
+      }
+
+      @media only screen and (max-width: 768px) { 
+        left: 6.5em;  
+      }
+
+      @media only screen and (max-width: 550px) { 
+        left: 1.1em;
+        top: -23em
+      } 
+      
+    }
+
+    .col-img {
+      width: 50%;
+      overflow: hidden;
+
+      @media only screen and (max-width: 992px) { 
+        width: 100%;   
+        position: relative;
+        overflow: visible;
+      }
+      
+
+      #hero-desktop {
+        margin-left: -18%;
+        @media only screen and (max-width: 992px) { 
+          display: none;  
+        }
+        
+      }
+
+    }
+
+    .col-faq{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      @media only screen and (max-width: 992px) { 
+        width: 100%;
+        position: absolute;
+        top: -10em;  
+      } 
+
+      h1 {
+        margin-bottom: 30px;
+
+        @media only screen and (max-width: 992px) { 
+          text-align: center;  
+        } 
+
+      }
+
+      .faq-container {
+
+        width: 85%;
+        position: absolute;
+
+        @media only screen and (max-width: 992px) { 
+          width: 87%;
+          position: static;   
+          margin: 0 auto;
+          padding-top: 35px;
+        } 
+
+        @media only screen and (max-width: 550px) { 
+          width: 95%; 
+        }
+
+        .accordion {
+          display: flex;
+          justify-content: space-between;
+          width: 90%;
+          background-color: #ffffff;
+          color: $very-dark-desaturated-blue;
+          cursor: pointer;
+          padding: 18px;
+          padding-left: 0;
+          border-bottom: 1px solid $light-grayish-blue;
+          text-align: left;
+          outline: none;
+          font-size: 14px;
+          transition: 0.4s;
+
+          @media only screen and (max-width: 992px) { 
+            margin: 0 auto;
+          } 
+
+          @media only screen and (max-width: 550px) { 
+            margin: 0 auto;
+            font-size: 13px;
+          } 
+
+          img {
+            height: fit-content;
+          }
+
+        }
+        
+        .active {
+          color: $very-dark-desaturated-blue;
+          font-weight: bold;
+          border-bottom: 0px;
+        }
+
+        .accordion:hover {
+          color: $soft-red;
+        }
+        
+        .panel {
+          width: 85%;
+          background-color: white;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          line-height: 1.5;
+          font-size: 12px;
+          color: $very-dark-grayish-blue;
+
+          @media only screen and (max-width: 992px) { 
+            margin: 0 auto;
+            width: 90%;
+          } 
+        }
+      }
+      
+    }
+    
+  }
+}
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    color: #ffffff;
+    }
+}
+
+
+
+
+
+
