@@ -65,8 +65,9 @@ main {
   }
 
   @media only screen and (max-width: 550px) { 
-    width: 327px; 
-    height: 520px;  
+    width: 327px;
+    height: 70%;
+    background-size: 58%;
   }
 
   .row {
@@ -102,8 +103,9 @@ main {
       }
 
       @media only screen and (max-width: 550px) { 
-        left: 1.1em;
-        top: -23em
+        left: 2.7em;
+        top: -19em;
+        width: 65%;
       } 
       
     }
@@ -145,6 +147,10 @@ main {
 
         @media only screen and (max-width: 992px) { 
           text-align: center;  
+        } 
+
+        @media only screen and (max-width: 550px) { 
+          margin-bottom: 5px; 
         } 
 
       }
@@ -229,7 +235,7 @@ main {
 .attribution {
   font-size: 0.8rem;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
 
   a {
     color: #ffffff;
