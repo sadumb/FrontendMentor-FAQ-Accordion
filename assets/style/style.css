@@ -152,12 +152,11 @@ main {
 }
 
 .container .row .col-faq .faq-container {
-  width: 100%;
+  width: 90%;
 }
 
 @media only screen and (max-width: 992px) {
   .container .row .col-faq .faq-container {
-    width: 87%;
     position: static;
     margin: 0 auto;
     padding-top: 35px;
