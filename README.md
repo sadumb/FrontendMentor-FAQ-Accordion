@@ -1,4 +1,5 @@
 # Frontend Mentor - FAQ Accordion Card
+# I'm still having problems on mobile resolution. I will learn more about css positioning in next challenge.
 
 ![Design preview for the FAQ Accordion Card coding challenge](./design/desktop-preview.jpg)
 
