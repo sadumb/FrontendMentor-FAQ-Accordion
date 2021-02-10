@@ -8,7 +8,6 @@
 }
 
 main {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,19 +15,21 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  min-height: 100vh;
+  padding: 5rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background-image: linear-gradient(to bottom, #af67e9, #6565e7);
 }
 
+@media only screen and (max-width: 576px) {
+  main {
+    padding: 5rem 2rem;
+  }
+}
+
 .container {
-  width: 920px;
-  height: 510px;
+  max-width: 58rem;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,35 +46,14 @@ main {
   background-position: -35.8em 70%;
 }
 
-@media only screen and (max-width: 1100px) {
-  .container {
-    width: 87%;
-  }
-}
-
 @media only screen and (max-width: 992px) {
   .container {
     background-image: url(../../images/bg-pattern-mobile.svg);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: top;
-    height: auto;
-    width: 650px;
-    height: 535px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .container {
-    width: 500px;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .container {
-    width: 327px;
-    height: 70%;
-    background-size: 58%;
+    margin: 3rem auto 2rem auto;
+    padding-bottom: 2.5rem;
   }
 }
 
@@ -96,7 +76,7 @@ main {
 
 .container .row #box {
   position: absolute;
-  bottom: 12%;
+  bottom: 19%;
   left: -10%;
 }
 
@@ -114,27 +94,15 @@ main {
   .container .row #hero-mobile {
     display: block;
     position: absolute;
-    top: -23.5em;
-    left: 11em;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .container .row #hero-mobile {
-    left: 6.5em;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .container .row #hero-mobile {
-    left: 2.7em;
-    top: -19em;
-    width: 65%;
+    left: 50%;
+    -webkit-transform: translate(-55%, -55%);
+            transform: translate(-55%, -55%);
   }
 }
 
 .container .row .col-img {
   width: 50%;
+  padding: 3rem;
   overflow: hidden;
 }
 
@@ -147,7 +115,7 @@ main {
 }
 
 .container .row .col-img #hero-desktop {
-  margin-left: -18%;
+  margin-left: -33%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -170,8 +138,6 @@ main {
 @media only screen and (max-width: 992px) {
   .container .row .col-faq {
     width: 100%;
-    position: absolute;
-    top: -10em;
   }
 }
 
@@ -185,15 +151,8 @@ main {
   }
 }
 
-@media only screen and (max-width: 550px) {
-  .container .row .col-faq h1 {
-    margin-bottom: 5px;
-  }
-}
-
 .container .row .col-faq .faq-container {
-  width: 85%;
-  position: absolute;
+  width: 100%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -205,12 +164,6 @@ main {
   }
 }
 
-@media only screen and (max-width: 550px) {
-  .container .row .col-faq .faq-container {
-    width: 95%;
-  }
-}
-
 .container .row .col-faq .faq-container .accordion {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -218,7 +171,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 90%;
+  width: 100%;
   background-color: #ffffff;
   color: #1d1e35;
   cursor: pointer;
@@ -241,7 +194,7 @@ main {
 @media only screen and (max-width: 550px) {
   .container .row .col-faq .faq-container .accordion {
     margin: 0 auto;
-    font-size: 13px;
+    font-size: 0.85rem;
   }
 }
 
@@ -257,27 +210,26 @@ main {
   border-bottom: 0px;
 }
 
+.container .row .col-faq .faq-container .arrow-active {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
 .container .row .col-faq .faq-container .accordion:hover {
   color: #f47c57;
 }
 
 .container .row .col-faq .faq-container .panel {
-  width: 85%;
+  width: 100%;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
   line-height: 1.5;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #4a4b5e;
-}
-
-@media only screen and (max-width: 992px) {
-  .container .row .col-faq .faq-container .panel {
-    margin: 0 auto;
-    width: 90%;
-  }
+  padding-right: 1.8rem;
 }
 
 .attribution {
